@@ -7,6 +7,6 @@
 control "unzip_fx - #{os.name} #{os.release} - 01" do
   title 'Fake test, because unzipping is a windows native functionnality'
   describe powershell('ls') do
-      its('exit_status') { should eq 0 }
+    its('exit_status') { should eq 0 }
   end
 end
