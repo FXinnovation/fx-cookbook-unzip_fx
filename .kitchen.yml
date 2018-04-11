@@ -113,13 +113,13 @@ platforms:
 suites:
 - name: linux
   run_list:
-  - recipe[adjoin_fx::kitchen]
+  - recipe[unzip_fx::kitchen]
   attributes:
     unzip_fx:
       source: https://releases.hashicorp.com/consul/1.0.6/consul_1.0.6_linux_amd64.zip
       checksum: bcc504f658cef2944d1cd703eda90045e084a15752d23c038400cf98c716ea01
       target_dir: /tmp/consul
-      creates: /tmp/consul/consul
+      creates: consul
       user: root
       group: root
       mode: '0777'
@@ -138,13 +138,13 @@ suites:
   - ubuntu1604
 - name: windows
   run_list:
-  - recipe[adjoin_fx::kitchen]
+  - recipe[unzip_fx::kitchen]
   attributes:
     unzip_fx:
       source: https://releases.hashicorp.com/consul/1.0.6/consul_1.0.6_linux_amd64.zip
       checksum: bcc504f658cef2944d1cd703eda90045e084a15752d23c038400cf98c716ea01
       target_dir: C:/temp/consul
-      creates: C:/temp/consul/consul
+      creates: consul
   verifier:
     inspec_tests:
     - name: default
