@@ -123,10 +123,6 @@ suites:
       user: root
       group: root
       mode: '0777'
-  verifier:
-    inspec_tests:
-    - name: default
-      path: test/integration/linux
   includes:
   - centos6
   - centos7
@@ -145,10 +141,6 @@ suites:
       checksum: bcc504f658cef2944d1cd703eda90045e084a15752d23c038400cf98c716ea01
       target_dir: C:/temp/consul
       creates: consul
-  verifier:
-    inspec_tests:
-    - name: default
-      path: test/integration/windows
   includes:
   - windows2008
   - windows2012
