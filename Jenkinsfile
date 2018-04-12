@@ -16,8 +16,7 @@ library(
     )
 )
 node(){
-  scmInfo = fx_checkout()
-  println "Tag: ${scmInfo.tag}"
-  println "Commit: ${scmInfo.commitId}"
-  println "Branch: ${scmInfo.branch}"
+  stove(
+    credentialId: 'chef_supermarket'
+  )
 }
