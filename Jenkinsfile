@@ -17,5 +17,7 @@ library(
 )
 node(){
   scmInfo = fx_checkout()
-  println scmInfo.tag
+  println "Tag: ${scmInfo.tag}"
+  println "Commit: ${scmInfo.commit_id}"
+  println "Branch: ${scmInfo.branch}"
 }
