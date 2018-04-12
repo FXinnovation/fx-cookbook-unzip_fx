@@ -4,7 +4,7 @@ library(
     retriever: legacySCM(
         [
             $class: 'GitSCM', 
-            branches: [[name: '*/1']], 
+            branches: [[name: '*/hotfix']], 
             doGenerateSubmoduleConfigurations: false, 
             extensions: [], 
             submoduleCfg: [], 
