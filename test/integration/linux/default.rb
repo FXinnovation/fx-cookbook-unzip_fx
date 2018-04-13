@@ -6,12 +6,7 @@
 #
 control "unzip_fx - #{os.name} #{os.release} - 01" do
   title 'Ensure required packages are installed'
-  packages = %w(
-    unzip
-  )
-  packages.each do |package_name|
-    describe package(package_name) do
-      it { should be_installed }
-    end
+  describe package('unzip') do
+    it { should be_installed }
   end
 end
