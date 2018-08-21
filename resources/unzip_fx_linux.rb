@@ -42,6 +42,8 @@ action :extract do
   remote_file "#{Chef::Config['file_cache_path']}/#{new_resource.name}" do
     source   new_resource.source
     checksum new_resource.checksum if new_resource.property_is_set?(:checksum)
+    owner    new_resource.user     if new_resource.property_is_set?('user')
+    group    new_resource.group    if new_resource.property_is_set?('group')
     action   :nothing
   end
 
@@ -52,6 +54,8 @@ action :extract do
   # Executing command
   execute "unzip_#{new_resource.name}" do
     command cmd
+    user    new_resource.user  if new_resource.property_is_set?('user')
+    group   new_resource.group if new_resource.property_is_set?('group')
     not_if  { ::File.exist?("#{new_resource.target_dir}/#{new_resource.creates}") } if new_resource.property_is_set?(:creates)
     notifies :create, "remote_file[#{Chef::Config['file_cache_path']}/#{new_resource.name}]", :before
   end
