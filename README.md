@@ -15,8 +15,9 @@ N/A
 * rhel7
 * centos6
 * centos7
+* ubuntu1404
 * ubuntu1604
-* debian8
+* ubuntu1804
 * debian9
 
 ## Resources
