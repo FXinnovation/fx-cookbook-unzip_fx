@@ -47,10 +47,10 @@ platforms:
   driver:
     image_project: ubuntu-os-cloud
     image_family: ubuntu-1604-lts
-- name: debian8
+- name: ubuntu1804
   driver:
-    image_project: debian-cloud
-    image_family: debian-8
+    image_project: ubuntu-os-cloud
+    image_family: ubuntu-1804-lts
 - name: debian9
   driver:
     image_project: debian-cloud
@@ -128,10 +128,10 @@ suites:
   - centos7
   - redhat6
   - redhat7
-  - debian8
   - debian9
   - ubuntu1404
   - ubuntu1604
+  - ubuntu1804
 - name: windows
   run_list:
   - recipe[unzip_fx::kitchen]
