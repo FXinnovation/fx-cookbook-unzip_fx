@@ -13,7 +13,15 @@ node(){
         println "Skipping ${currentCookbook.name}"
       }else{
         println "#### COOKBOOK: $currentCookbook.name"
-        sh "docker run --rm chef/chefdk knife supermarket show ${currentCookbook.name} -F json"
+        stdout = sh(
+          returnStdout: true,
+          command:      "docker run --rm chef/chefdk knife supermarket show ${currentCookbook.name} -F json"
+        ).trim()
+        cookbook = readJSON text: stdout
+        for (j = 0; j < cookbook.versions.size(); j++){
+          version = cookbook.versions[j].split('/').last()
+          println version
+        }
         println "####"
       }
     }
