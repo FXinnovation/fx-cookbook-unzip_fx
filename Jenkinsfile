@@ -10,7 +10,7 @@ node(){
     for(i = 0; i < list.cookbooks.size(); i++){
       currentCookbook = list.cookbooks[i].name
       println "#### COOKBOOK: $currentCookbook"
-      sh "docker run --rm chef/chefdk knife supermarket cookbook ${currentCookbook} -F json"
+      sh "docker run --rm chef/chefdk knife supermarket cookbook show ${currentCookbook} -F json"
       println "####"
     }
   }
