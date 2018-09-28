@@ -19,7 +19,7 @@ node(){
         for (j = 0; j < cookbook.versions.size(); j++){
           version = cookbook.versions[j].split('/').last()
           knife.supermarketDownload(
-            name: currentCookbook.name
+            name: currentCookbook.name,
             version: version
           )
         }
