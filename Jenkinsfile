@@ -15,7 +15,7 @@ node(){
         println "#### COOKBOOK: $currentCookbook.name"
         stdout = sh(
           returnStdout: true,
-          command:      "docker run --rm chef/chefdk knife supermarket show ${currentCookbook.name} -F json"
+          script:       "docker run --rm chef/chefdk knife supermarket show ${currentCookbook.name} -F json"
         ).trim()
         cookbook = readJSON text: stdout
         for (j = 0; j < cookbook.versions.size(); j++){
