@@ -12,3 +12,6 @@ supports          'redhat',  '>= 6.0'
 supports          'centos',  '>= 6.0'
 supports          'debian',  '>= 8.0'
 supports          'ubuntu',  '>= 14.04'
+
+depends           'aws'
+depends           'poise-python'
