@@ -14,7 +14,7 @@ node(){
         println "#### COOKBOOK: $currentCookbook.name"
         cookbook = knife.supermarketShow(
           name: currentCookbook.name,
-          format: json,
+          format: 'json',
           returnCookbook: true
         )
         for (j = 0; j < cookbook.versions.size(); j++){
