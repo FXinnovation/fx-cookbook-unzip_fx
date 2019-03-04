@@ -1,7 +1,7 @@
 #!/bin/groovy
 //fx_cookbook()
 @Library('com.fxinnovation.fxinnovation-common-pipeline-library@feature/chefCookbookUpload') _
-@Library('com.fxinnovation.public-common-pipeline-jenkins@feature/chefEnvironment') __
+//@Library('com.fxinnovation.public-common-pipeline-jenkins@feature/chefEnvironment') __
 
 fxUploadCookbook([
     credentialId: 'chef-server-demo',
