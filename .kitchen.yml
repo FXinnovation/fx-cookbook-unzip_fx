@@ -125,23 +125,23 @@ suites:
       mode: '0777'
   includes:
   - centos6
-  - centos7
-  - redhat6
-  - redhat7
-  - debian9
-  - ubuntu1404
-  - ubuntu1604
-  - ubuntu1804
-- name: windows
-  run_list:
-  - recipe[unzip_fx::kitchen]
-  attributes:
-    unzip_fx:
-      source: https://releases.hashicorp.com/consul/1.0.6/consul_1.0.6_linux_amd64.zip
-      checksum: bcc504f658cef2944d1cd703eda90045e084a15752d23c038400cf98c716ea01
-      target_dir: C:/temp/consul
-      creates: consul
-  includes:
-  - windows2008
-  - windows2012
-  - windows2016
+#  - centos7
+#  - redhat6
+#  - redhat7
+#  - debian9
+#  - ubuntu1404
+#  - ubuntu1604
+#  - ubuntu1804
+#- name: windows
+#  run_list:
+#  - recipe[unzip_fx::kitchen]
+#  attributes:
+#    unzip_fx:
+#      source: https://releases.hashicorp.com/consul/1.0.6/consul_1.0.6_linux_amd64.zip
+#      checksum: bcc504f658cef2944d1cd703eda90045e084a15752d23c038400cf98c716ea01
+#      target_dir: C:/temp/consul
+#      creates: consul
+#  includes:
+#  - windows2008
+#  - windows2012
+#  - windows2016
