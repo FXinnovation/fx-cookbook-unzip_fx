@@ -3,7 +3,7 @@ maintainer        'fxinnovation'
 maintainer_email  'cloudsquad@fxinnovation.com'
 license           'MIT'
 description       'Provides a resource to download and unzip a file'
-version           '0.2.1'
+version           '0.2.2'
 source_url        'https://bitbucket.org/fxadmin/public-common-cookbook-unzip_fx'
 issues_url        'https://bitbucket.org/fxadmin/public-common-cookbook-unzip_fx/issues'
 chef_version      '>= 12.5' if respond_to?(:chef_version)
